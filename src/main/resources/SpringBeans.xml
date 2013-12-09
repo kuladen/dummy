@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="helloBean" class="HelloWorld">
+		<constructor-arg index="0" value="Denis Kulagin z" />
+		<constructor-arg index="1" ref="printerBean" />
+
+		<property name="accounts">
+			<map>
+				<entry key="one" value="9.99" />
+				<entry key="two00" value="2.75" />
+				<entry key="six" value="3.99" />
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="printerBean" class="Printer" />
+
+</beans>
